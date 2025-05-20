@@ -1,3 +1,7 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
 /**
  * Clase AddGameDialog.
  * Ventana de diálogo para añadir un nuevo juego Pokémon al ranking.
@@ -60,7 +64,7 @@ class AddGameDialog extends JDialog {
                     JOptionPane.showMessageDialog(AddGameDialog.this,
                         "Juego añadido correctamente.", "Añadir", JOptionPane.INFORMATION_MESSAGE);
                     AddGameDialog.this.dispose();
-                } catch (DatosInvalidosException ex) {
+                } catch (DatosInvalidos ex) {
                     // Mostrar mensaje de error si los datos son inválidos.
                     JOptionPane.showMessageDialog(AddGameDialog.this,
                         ex.getMessage(), "Datos inválidos", JOptionPane.ERROR_MESSAGE);
