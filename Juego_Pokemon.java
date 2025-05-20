@@ -59,7 +59,7 @@ class JuegoPokemon {
         int generacion;
         try {
             generacion = Integer.parseInt(genStr);
-        } catch (NumberFormat e) {
+        } catch (NumberFormatException e) {
             throw new DatosInvalidos("La generación debe ser un número entero.");
         }
         if (generacion <= 0) {
@@ -69,7 +69,7 @@ class JuegoPokemon {
         int puntuacion;
         try {
             puntuacion = Integer.parseInt(puntStr);
-        } catch (NumberFormat e) {
+        } catch (NumberFormatException e) {
             throw new DatosInvalidos("La puntuación debe ser un número entero.");
         }
         if (puntuacion < 1 || puntuacion > 5) {
